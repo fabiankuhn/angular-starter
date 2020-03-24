@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+//Import Bootstrap and Font-Awesome
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+//Normalize SCSS
+@import "normalize";
+@include normalize();
+
+//Import Files
+@import'general';
+@import 'fonts';
+
+// include Angular Material Theme
+@import 'material';
