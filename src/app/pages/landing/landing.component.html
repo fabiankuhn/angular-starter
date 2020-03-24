@@ -1,3 +1,17 @@
 <h1>Angular-Starter!</h1>
 <p> Welcome to Angular Starter. See Readme.md and file Structure for Infos.</p>
 <img alt="Logo" src="/assets/image/angular_logo.png" style="width: 200px;">
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Place</th>
+  </tr>
+  <tr *ngFor="let order of orders">
+    <td>{{order.id}}</td>
+    <td>{{order.name}}</td>
+    <td>{{order.price}}</td>
+    <td>{{order.place}}</td>
+  </tr>
+</table>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {OrderService} from '../../shared/service/orderService/order.service';
+import {OderModel} from '../../shared/model/oder.model';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  private orders: OderModel[];
+
+  constructor(
+    private orderService: OrderService
+  ) { }
 
   ngOnInit(): void {
+    this.getOrders();
   }
 
+  getOrders(): void {
+    this.orderService.getOrders().subscribe((orders: OderModel[]) => {
+      this.orders = orders;
+      console.log(this.orders);
+    });
+  }
 }
